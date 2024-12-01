@@ -11,12 +11,16 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.input-container {
+.task-form {
+  display: flex;
+  gap: 0.5rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-input[type="text"] {
-  width: 100%;
+.task-input {
+  flex: 1;
+  min-width: 200px;
   padding: 0.8rem;
   font-size: 1rem;
   border: 2px solid #ddd;
@@ -25,8 +29,35 @@ input[type="text"] {
   transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus {
-  border-color: #0066cc;
+.date-input {
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.category-select {
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: white;
+}
+
+.add-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #0052a3;
 }
 
 .task-list {
@@ -51,9 +82,34 @@ input[type="text"]:focus {
 
 .task-label {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
   flex: 1;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.task-details {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.task-category {
+  background-color: #e9ecef;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.task-date {
+  color: #666;
+  font-size: 0.8rem;
 }
 
 input[type="checkbox"] {
